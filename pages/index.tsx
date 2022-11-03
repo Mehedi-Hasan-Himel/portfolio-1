@@ -1,5 +1,12 @@
 import Head from "next/head";
 import { BsFillMoonStarsFill } from "react-icons/bs";
+import {
+  AiFillTwitterCircle,
+  AiFillLinkedin,
+  AiFillYoutube,
+} from "react-icons/ai";
+import Image from "next/image";
+import developer from "../public/dev-ed-wave.png";
 
 export default function Home() {
   return (
@@ -12,17 +19,16 @@ export default function Home() {
 
       <main className=" bg-white px-10">
         <section className=" min-h-screen">
-
           {/* Nav Section Start */}
-          <nav className=" py-10 mb-12 flex justify-between">
-            <h1 className=" text-xl font-burtons">Mehedi Hasan Himel</h1>
+          <nav className=" mb-12 flex justify-between py-10">
+            <h1 className=" font-burtons text-xl">Developer Portfolio</h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill className=" cursor-pointer text-2xl"></BsFillMoonStarsFill>
               </li>
               <li>
                 <a
-                  className=" bg-gradient-to-r  from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
+                  className=" ml-8  rounded-md bg-gradient-to-r from-cyan-500 to-teal-500 px-4 py-2 text-white"
                   href=""
                 >
                   Resume
@@ -31,7 +37,25 @@ export default function Home() {
             </ul>
           </nav>
           {/* Nav Section End */}
-          
+
+          <div className="p-10 text-center">
+            <h2 className=" text-4xl font-medium text-teal-600 ">
+              Mehedi Hasan Himel
+            </h2>
+            <h3 className=" py-2 text-2xl">Front-End Developer</h3>
+            <p className=" text-md py-5 leading-8 text-gray-500">
+              Freelancer providing services for programming and design content
+              needs. Join me below and let's get cracking !
+            </p>
+          </div>
+          <div className="flex justify-center gap-16 py-3 text-5xl text-gray-600">
+            <AiFillTwitterCircle></AiFillTwitterCircle>
+            <AiFillLinkedin></AiFillLinkedin>
+            <AiFillYoutube></AiFillYoutube>
+          </div>
+          <div className="relative mx-auto mt-20 h-80 w-80  rounded-full bg-gradient-to-b from-teal-500">
+            <Image src={developer} alt="Developer Image"></Image>
+          </div>
         </section>
       </main>
     </div>
