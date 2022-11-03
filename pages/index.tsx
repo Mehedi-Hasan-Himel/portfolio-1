@@ -7,6 +7,7 @@ import {
 } from "react-icons/ai";
 import Image from "next/image";
 import developer from "../public/dev-ed-wave.png";
+import design from "../public/design.png";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       </Head>
 
       <main className=" bg-white px-10">
+        {/* Profile Section Start */}
         <section className=" min-h-screen">
           {/* Nav Section Start */}
           <nav className=" mb-12 flex justify-between py-10">
@@ -38,6 +40,7 @@ export default function Home() {
           </nav>
           {/* Nav Section End */}
 
+          {/* Profile Text Start */}
           <div className="p-10 text-center">
             <h2 className=" text-4xl font-medium text-teal-600 ">
               Mehedi Hasan Himel
@@ -48,13 +51,64 @@ export default function Home() {
               needs. Join me below and let's get cracking !
             </p>
           </div>
+          {/* Profile Text End  */}
+
+          {/* Profile Social icons Start */}
           <div className="flex justify-center gap-16 py-3 text-5xl text-gray-600">
             <AiFillTwitterCircle></AiFillTwitterCircle>
             <AiFillLinkedin></AiFillLinkedin>
             <AiFillYoutube></AiFillYoutube>
           </div>
-          <div className="relative mx-auto mt-20 h-80 w-80  rounded-full bg-gradient-to-b from-teal-500">
-            <Image src={developer} alt="Developer Image"></Image>
+          {/* Profile Social icons End */}
+
+          {/* Profile Image Start */}
+          <div className="relative mx-auto mt-20 h-80 w-80  overflow-hidden rounded-full bg-gradient-to-b from-teal-500">
+            <Image
+              src={developer}
+              alt="Developer Image"
+              layout="fill"
+              objectFit="cover"
+            ></Image>
+          </div>
+          {/* Profile Image End */}
+        </section>
+        {/* Profile Section End */}
+
+        <section>
+          <div>
+            <h3 className="py-1 text-3xl">Services I Offer</h3>
+            <p className=" text-md loading-8 py-2 text-gray-800">
+              Since the beginning the journey as a freelancer developer, I have
+              done remote work for different clients and{" "}
+              <span className="text-teal-500">agencies</span> consulted for{" "}
+              <span className="text-teal-500">Startups</span> and collaborations
+              with talented people to create digital products for both business
+              and consumer users.
+            </p>
+            <p className="text-md loading-8 py-2 text-gray-800">
+              I offer form a wide range of services, including Programming and
+              Teaching.{" "}
+            </p>
+          </div>
+          <div>
+            <div className="text-center shadow-lg p-10 rounded-xl my-10">
+              <Image className="inline-block"
+                src={design}
+                alt="design image."
+                width={100}
+                height={100}
+              ></Image>
+              <h3 className="pt-8 pb-2 text-lg font-medium">
+                Beautiful Designs
+              </h3>
+              <p className="py-2">
+                Creating elegant designs suited for your needs design theory.
+              </p>
+              <h4 className="py-4 text-teal-600">Design tools I use:</h4>
+              <p className=" py-1 text-gray-800">Photoshop</p>
+              <p className=" py-1 text-gray-800"> Adobe Illustrator</p>
+              <p className=" py-1 text-gray-800">Figma</p>
+            </div>
           </div>
         </section>
       </main>
